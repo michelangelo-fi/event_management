@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-$gm_v%#%z=!tdo1%s^9-g5t0(=8+#tq3(f-+i)%wx4a3qkpqh_
 DEBUG = True
 
 #per railway deployment
-ALLOWED_HOSTS = ['web-production-5a752b.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = ['https://web-production-5a752b.up.railway.app']
 
