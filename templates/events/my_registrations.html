@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}I miei eventi{% endblock %}
+
+{% block content %}
+<h2>I miei eventi</h2>
+
+{% if registrations %}
+    <div class="row">
+        {% for reg in registrations %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ reg.event.title }}</h5>
+                        <p class="card-text text-muted">{{ reg.event.date|date:"d/m/Y H:i" }}</p>
+                        <p class="card-text">{{ reg.event.location }}</p>
+                        <p class="card-text"><small class="text-muted">Registrato il {{ reg.registered_at|date:"d/m/Y" }}</small></p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{% url 'event_detail' reg.event.pk %}" class="btn btn-outline-primary btn-sm">Dettagli</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p class="text-muted">Non sei ancora registrato ad alcun evento.</p>
+{% endif %}
+{% endblock %}

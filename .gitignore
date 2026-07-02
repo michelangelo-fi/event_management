@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Django
+*.log
+local_settings.py
+
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
