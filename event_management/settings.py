@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 import os
-#per railway deployment
-ALLOWED_HOSTS = ['web-production-5a752b.up.railway.app']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +26,9 @@ SECRET_KEY = 'django-insecure-$gm_v%#%z=!tdo1%s^9-g5t0(=8+#tq3(f-+i)%wx4a3qkpqh_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#per railway deployment
+ALLOWED_HOSTS = ['web-production-5a752b.up.railway.app']
+
 
 
 # Application definition
